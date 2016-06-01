@@ -1,0 +1,56 @@
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <!--Body content-->
+      <h2>Place your order</h2>
+      <p>
+        Name of the restaurant:<br>
+        <input type="text" ng-model="$ctrl.restaurant"/></p>
+       <p>
+        Name of the meal:<br>
+        <input type="text" ng-model="$ctrl.mealName">
+      </p>
+      <p>Price of the meal:<br>
+        <input type="number" ng-model="$ctrl.mealPrice">
+      </p>
+        <button class="btn btn-primary" type="submit" ng-click="$ctrl.saveData()">Submit</button>
+    </div>
+
+        <div class="col-md-4">
+      <!--Body content-->
+      <button type="button" class="btn btn-info" ng-click="$ctrl.showActiveFunc()">Active orders</button>
+
+      <ul class="list-unstyled" ng-show = "$ctrl.showActive">
+        <li ng-repeat="order in $ctrl.orders | filter: $ctrl.getActive">
+          <p ng-click="$ctrl.activeDetails()">Restaurant: <i>{{order.restaurant}}</i></p>
+          <ul class="list-unstyled" ng-show="$ctrl.showActiveDetails">
+            <li>
+              <p>Meal: <i>{{order.meal.name}}</i></p>
+              <p>Price: <i>{{order.meal.price}}</i></p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+     <div class="col-md-4">
+      <!--Body content-->
+     <button type="button" class="btn btn-info" ng-click="$ctrl.showHistoryFunc()">Order history</button>
+      <ul class="list-unstyled" ng-show = "$ctrl.showHistory">
+        <li ng-repeat="order in $ctrl.orders | filter: $ctrl.getHistory">
+          <p ng-click="$ctrl.historyDetails()">Restaurant: <i>{{order.restaurant}}</i></p>
+          <ul class="list-unstyled" ng-show="$ctrl.showHistoryDetails">
+            <li>
+              <p>Meal: <i>{{order.meal.name}}</i></p>
+              <p>Price: <i>{{order.meal.price}}</i></p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

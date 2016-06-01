@@ -1,0 +1,7 @@
+{
+		"restaurant":"RestC",
+		"meal":{"name":"Pilau", "price":100},
+		"ordered":true,
+		"finalised":true,
+		"delivered":true
+	}

@@ -1,0 +1,7 @@
+{
+		"restaurant":"RestA",
+		"meal":{"name":"Rice and beans","price":100},
+		"ordered":true,
+		"finalised":true,
+		"delivered":true
+	}

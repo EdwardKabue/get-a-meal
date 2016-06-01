@@ -1,0 +1,7 @@
+{
+		"restaurant":"RestD",
+		"meal":{"name":"Ugali and nyama choma", "price":200},
+		"ordered":true,
+		"finalised":true,
+		"delivered":true
+}

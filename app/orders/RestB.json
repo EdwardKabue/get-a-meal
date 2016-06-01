@@ -1,0 +1,7 @@
+{
+		"restaurant":"RestB",
+		"meal":{"name":"Chapati and green grams", "price":100},
+		"ordered":true,
+		"finalised":true,
+		"delivered":true
+	}
